@@ -1,0 +1,260 @@
+<meta charset="utf-8"><!-- -*- markdown -*- -->
+    **CSE 227: Graduate Computer Security**
+         [*Deian Stefan*](https://cseweb.ucsd.edu/~dstefan/)
+
+About
+==============================================================
+
+This course focuses on computer security, exploring a range of topics – from
+systems security, to web security, edge security, and privacy – to illustrate
+some of the modern research challenges in the area and the standards for
+advancement. It is not designed to be a tutorial course, but rather to give
+students the context to understand current security research and evaluate their
+interest in the field. The course will examine both the defensive and offensive
+side of the field. At the conclusion of the course, the students will have the
+foundation to conduct research in computer security and to apply the latest
+security research to a particular area of practice.
+
+Lectures:
+: Monday and Wednesday, 5:00--6:20pm, on Zoom
+Staff:
+: **Instructor**: Deian Stefan <deian+cse227@cs.ucsd.edu>
+
+: **Teaching Assistant**: John Renner
+
+Office hours:
+: **Deian**: Tuesday, 3:00--4:00pm, or by appointment
+
+: **John**: By appointment
+
+Zoom information:
+: See [course Canvas site](https://canvas.ucsd.edu/courses/25076). If you are not enrolled in this class but want to
+  participate in the class remotely please email the instructor. To facilitate
+  an open discussion, the in-class discussion will *not* be recorded.
+
+Class discussion:
+: We'll use Discord for all class related communication (invite link is on Canvas).
+
+Calendar and Readings
+==============================================================
+
+
+Mon Mar 29 2021: Introduction
+  - *Reading*:
+    - [How to Read a Paper](papers/keshav:how.pdf) by S. Keshav 
+    - [Reflections on Trusting Trust](papers/thompson:reflections.pdf) by K. Thompson
+
+Wed Mar 31 2021: Low-level vulnerabilities and exploits
+  - *Reading*:
+    - [Hacking Blind](papers/bittau:brop.pdf) by A. Bittau et al.
+    - [A Modern History of Offensive Security Research](https://docs.google.com/presentation/d/19HfkIojyLE8L8X8aZT-lJont96JqIg4PqEhb2juIK2c/edit#slide=id.p) by D. Dai Zovi
+  - *Write up*: [here](https://docs.google.com/forms/d/e/1FAIpQLSf_UTkLnwlXYUATQLEgUpOupnuTspC8aaGEFhdwIn0Af_GJUg/viewform?usp=sf_link)
+  - *Additional reading*:
+    - [Low-Level Software Security by Example](papers/erlingsson:low.pdf) by U. Erlingsson et al.
+    - [Return-Oriented Programming: Systems, Languages, and Applications](papers/roemer:rop.pdf) by R. Roemer et al.
+
+Mon Apr 5 2021: Finding vulnerabilities and exploits
+  - *Reading*:
+    - [Sys: A Static/Symbolic Tool for Finding Good Bugs in Good (Browser) Code](https://cseweb.ucsd.edu/~dstefan/pubs/brown:2021:sys.pdf) by F. Brown et al.
+    - [AEG: Automatic Exploit Generation](papers/avgerinos:aeg.pdf) by T. Avgerinos et al.
+  - *Write up*: [here](https://docs.google.com/forms/d/e/1FAIpQLScXcPv9CHQEr8Y3_tk820WVxkRXG20-PmSTZJ_t_R9YgyN3AA/viewform?usp=sf_link)
+  - *Additional reading*:
+    - [EXE: Automatically Generating Inputs of Death](papers/cadar:exe.pdf) by C. Cadar et al.
+    - [KLEE: Unassisted and Automatic Generation of High-Coverage Tests for Complex Systems Programs](papers/cadar:klee.pdf) by C. Cadar et al.
+
+Wed Apr 7 2021: Control flow integrity
+  - *Reading*:
+    - [Control-Flow Integrity: Principles, Implementations, and Applications](papers/abadi:cfi.pdf) by M. Abadi et al.
+    - [Finding Cracks in Shields: On the Security of Control Flow Integrity Mechanisms](papers/li:cracks.pdf) by Li et al.
+  - *Write up*: [here](https://docs.google.com/forms/d/e/1FAIpQLSchEdeTesshbNyQghOnSn5gtaLVq-OQlCjcKqLeR_cpSO6nuw/viewform?usp=sf_link)
+  - *Additional reading*:
+    - [Control-Flow Integrity: Precision, Security, and Performance](papers/burow:cfi.pdf) by N. Burow et al.
+    - [Control-Flow Bending: On the Effectiveness of Control-Flow Integrity](papers/carlini:cfb.pdf) by N. Carlini et al.
+
+Mon Apr 12 2021: Software fault isolation
+  - *Reading*:
+    - [Retrofitting Fine Grain Isolation in the Firefox Renderer](papers/narayan:retrofitting.pdf) by S. Narayan et al.
+  - *Write up*: [here](https://docs.google.com/forms/d/e/1FAIpQLSfmvQp8pHZdK7DsRTz22tiy5J9wyR4W1ekrSIkvu4YWeZPxgg/viewform?usp=sf_link)
+  - *Additional reading*:
+    - [Principles and Implementation Techniques of Software-Based Fault Isolation](papers/tan:sfi.pdf) by G. Tan
+    - [The High-level Benefits of Low-level Sandboxing](papers/sammler:the-high-level.pdf) by M. Sammler et al.
+
+Wed Apr 14 2021: Privilege separation
+ - *Reading*:
+    - [Preventing Privilege Escalation](papers/provos:ssh.pdf) by N. Provos et al.
+    - [Privtrans: Automatically partitioning programs for privilege separation](papers/brumley:privtrans.pdf) by D. Brumley and D. Song
+  - *Write up*: [here](https://docs.google.com/forms/d/e/1FAIpQLScL-lD37z1AbVVLyzPqv3lT9igjWLfQn9swJ2jYlLaXqFkP1w/viewform?usp=sf_link)
+ - *Additional reading*:
+    - [Building Secure High-Performance Web Services with OKWS](krohn:okws.pdf) by M. Krohn
+    - [Site Isolation: Process Separation for Web Sites within the Browser](papers/reis:site.pdf) by C. Reis et al.
+
+Fri Apr 16 2021: Project proposal
+
+  - *Write up*: [here](https://docs.google.com/forms/d/e/1FAIpQLSeyfPyW9GxuvoDjSEjgiYMrHmYFW7OxH9My6uRgxznmTcS_9Q/viewform?usp=sf_link)
+  - *Expectation*: At the very least, you should have a clear problem
+    statement, brief literature survey (e.g., to understand how and if this
+    done before), evaluation questions and approach, and brief risk
+    analysis (e.g., to understand the best and worst case outcome of the
+    project).
+
+
+Mon Apr 19 2021: Capabilities
+  - *Reading*:
+    - [Capsicum: Practical Capabilities for UNIX](papers/capsicum.pdf) by R. Watson et. al
+  - *Write up*: [here](https://docs.google.com/forms/d/e/1FAIpQLSf2bYfG6y9rs5DRCTKZBO_b4k6cdFxUYGdP2w0EXncNZXrOUg/viewform?usp=sf_link)
+  - *Additional reading*:
+    - [CHERI: A Hybrid Capability-System Architecture for Scalable Software Compartmentalization](papers/watson:cheri.pdf) by R. Watson et. al
+    - [CloudABI](https://www.youtube.com/watch?v=3N29vrPoDv8) by E. Schouten
+
+Wed Apr 21 2021: Information flow control
+  - *Reading*:
+    - [Hails: Protecting Data Privacy in Untrusted Web Applications](https://cseweb.ucsd.edu/~dstefan/pubs/giffin:2012:hails.pdf) by D. Stefan et al.
+  - *Write up*: [here](https://docs.google.com/forms/d/e/1FAIpQLScCJNbur-0e6Mhl_3iTi69XblCtePtj6tRJBc8inCzKcA1gag/viewform?usp=sf_link)
+  - *Additional reading*:
+    - [Language-Based Information-Flow Security](papers/sabelfeld:ifc.pdf)
+    - [Flexible Dynamic Information Flow Control in the Presence of Exceptions](https://cseweb.ucsd.edu/~dstefan/pubs/stefan:2017:flexible.pdf) by D. Stefan et al.
+
+Mon Apr 26 2021: Verification
+  - *Reading*:
+    - [seL4: Formal Verificaiton of an OS Kernel](papers/sel4.pdf) by G. Klein et al.
+    - [Modular Verification for Computer Security](papers/appel:modular.pdf) by A. Appel
+  - *Write up*: [here](https://docs.google.com/forms/d/e/1FAIpQLSd7RioE_C6lg-U2ZEjyMGoQPA-VXQwut06A0x0Z_dRhUpaB4Q/viewform?usp=sf_link)
+  - *Additional reading*:
+    - [Hyperkernel: Push-Button Verification of an OS Kernel](papers/hyperkernel.pdf) by L. Nelson et al.
+
+Wed Apr 28 2021: No class
+
+Fri Apr 30 2021: Status update
+
+Mon May 3 2021: JavaScript JIT exploitation
+ - *Reading*:
+    - [Compile Your Own Type Confusion: Exploiting Logic Bugs in JavaScript JIT Engines](http://phrack.org/papers/jit_exploitation.html) by saelo
+    - [A case study of JavaScriptCore and CVE-2016-4622](http://phrack.org/papers/attacking_javascript_engines.html) by saelo
+ - *Write up*: [here](https://docs.google.com/forms/d/e/1FAIpQLSdyHwpjh2qZo3ab18DH3l0jhaFViKWyHTwGawUCwR9L56CnVg/viewform?usp=sf_link)
+ - *Additional reading*:
+    - [Finding and Preventing Bugs in JavaScript Bindings](papers/brown:finding.pdf) by F. Brown et al.
+    - [CodeAlchemist: Semantics-Aware Code Generation to Find Vulnerabilities in JavaScript Engines](papers/han:codealchemist.pdf) by H. Han et al.
+
+Wed May 5 2021: JavaScript JIT defenses
+ - *Reading*:
+    - [Towards a verified range analysis for JavaScript JITs](https://cseweb.ucsd.edu/~dstefan/pubs/brown:2021:vera.pdf) by F. Brown et al.
+ - *Write up*: [here](https://docs.google.com/forms/d/e/1FAIpQLSeBvVsw9_vLphMqy26yeSEzTKNRG0phKPyboEKumn1PZtBcnQ/viewform?usp=sf_link)
+ - *Additional reading*:
+    - [NoJITsu: Locking Down JavaScript Engines](papers/park:nojitsu.pdf) by T. Park et al.
+    
+Mon May 10 2021: eBPF exploitation
+ - *Reading*:
+    - [Simple and Precise Static Analysis of Untrusted Linux Kernel Extensions](papers/gershuni:prevail.pdf) by E. Gershuni et al.
+ - *Write up*: [here](https://docs.google.com/forms/d/e/1FAIpQLSe0NMC5jnfZVPoHOrr86VkAhkNBVD-dpqwGsmgmHu_86BDDqg/viewform?usp=sf_link)
+ - *Additional reading*:
+    - [CVE-2021-8835: Linux Kernel Privilege Escalation via Improper eBPF Program Verification](https://www.zerodayinitiative.com/blog/2021/4/8/cve-2021-8835-linux-kernel-privilege-escalation-via-improper-ebpf-program-verification) by M. Paul
+
+Wed May 12 2021: eBPF defenses
+ - *Reading*:
+    - [Specification and verification in the field: Applying formal methods to BPF just-in-time compilers in the Linux kernel](papers/nelson:jitterbug.pdf) by L. Nelson et al. 
+ - *Write up*: [here](https://docs.google.com/forms/d/e/1FAIpQLSc59vrK3FwPWgQKemEHG4YbeWyrPvjtAWDiy3qO5hSKCVkUZg/viewform?usp=sf_link)
+ - *Additional reading*:
+    - [Jitk: A Trustworthy In-Kernel Interpreter Infrastructure](papers/wang:jitk.pdf) by X. Wang et al.
+
+Fri May 14 2021: Status update
+
+Mon May 17 2021: Hardware exploitation
+ - *Reading*:
+    - [Spectre Attacks: Exploiting Speculative Execution](papers/spectre.pdf) by P. Kocher et al.
+    - [Escaping the Chrome Sandbox with RIDL](https://googleprojectzero.blogspot.com/2021/02/escaping-chrome-sandbox-with-ridl.html) by S.Röttger
+ - *Write up*: [here](https://docs.google.com/forms/d/e/1FAIpQLSfYFRkwgL_ODMcsgso63Mie1xH7ZcvLOzZuOsiz9Fd-waYrOA/viewform?usp=sf_link)
+ - *Additional reading*:
+    - [A Systematic Evaluation of Transient Execution Attacks and Defenses](papers/canella:systematic.pdf) by C. Canella et al.
+    - [LVI - Hijacking Transient Execution with Load Value Injection](papers/lvi.pdf) by J. V. Bulck
+
+Wed May 19 2021: Hardware defenses
+ - *Reading*:
+    - [Efficiently Mitigating Transient Execution Attacks using the Unmapped Speculation Contract](papers/behrens:ward.pdf) by J. Behrens et al.
+    - [Swivel: Hardening WebAssembly against Spectre](https://cseweb.ucsd.edu/~dstefan/pubs/narayan:2021:swivel.pdf) by S. Narayan et al.
+ - *Write up*: [here](https://docs.google.com/forms/d/e/1FAIpQLSfnVQuKP0X7iJBTvqkrMKTdt1M6wIUa1i7vcTpTnG21LfFZUQ/viewform?usp=sf_link)
+ - *Additional reading*:
+    - [Security Analysis of Processor Instruction Set Architecture for Enforcing Control-Flow Integrity](papers/shanbhogue:cet.pdf) by V. Shanbhogue et al.
+
+Mon May 24 2021: No class
+
+Wed May 26 2021: Crypto attacks
+ - *Reading*:
+    - [The Most Dangerous Code in the World: Validating SSL Certificates in Non-Browser Software](papers/georgiev:the-most.pdf) by M. Georgiev et al.
+    - [TPM-FAIL: TPM meets Timing and Lattice Attacks](https://arxiv.org/abs/1911.05673) by D. Moghimi et al.
+ - *Write up*: [here](https://docs.google.com/forms/d/e/1FAIpQLSf7L7SNcYjomR1m9RX6fzPRRPCc8aPuk_kjsuec7Zx8lnL9Iw/viewform?usp=sf_link)
+ - *Additional reading*:
+    - [A Messy State of the Union: Taming the Composite State Machines of TLS](papers/beurdouche:a-messy.pdf) by M. Beurdouche et al.
+
+Fri May 28 2021: Status update
+
+Mon May 31 2021: No class
+
+Wed Jun 2 2021: Crypto defenses
+ - *Reading*:
+    - [Jasmin: High-Assurance and High-Speed Cryptography](papers/almeida:jasmin.pdf) by J. B. Almeida et al.
+    - [HACL*: A verified modern cryptographic library](https://eprint.iacr.org/2017/536) by Zinzindohoué et al.
+ - *Write up*: [here](https://docs.google.com/forms/d/e/1FAIpQLSdYuMI9JF4PxFMhJmqahySqeNiy1osqF3sJ_KP-zM55bXBJEw/viewform?usp=sf_link)
+ - *Additional reading:* 
+    - [SoK: Computer-Aided Cryptography](papers/barbosa:sok.pdf) by M. Barbosa et al.
+    - [FaCT: A DSL for timing-sensitive computation](papers/cauligi:fact.pdf) by S. Cauligi et al.
+
+
+Evaluation
+==============================================================
+
+Since the primary goal of this course is to prepare to you to do research, the
+evaluation for this course is simple: (1) class participation and (2)
+research project.
+
+Participation (35%)
+--------------------------------------------------------------
+
+You are expected to read the assigned paper(s) before each meeting. In class we
+will discuss the interesting parts of the paper(s). You are expected to do any
+background reading on your own and come prepared with questions and an
+evaluation of the paper. To make this easy: For each paper you will turn in a
+short write-up morning of lecture (11am pacific).
+
+Research project (65%)
+--------------------------------------------------------------
+
+You will work on projects in groups of 3-5.  The goal of the project is to
+conduct original research in security. You are encouraged to come up with your
+own project idea, but we have a few ideas that are well-scoped for a quarter
+project.
+
+At the end of the quarter, you are expected to turn in a short research paper
+(6-10 pages) and give a 10 minute talk. We will have periodic status updates to
+help you stay on track.
+
+
+<style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="markdeep.min.js"></script>
+<script>
+  window.alreadyProcessedMarkdeep || (document.body.style.visibility="visible");
+  markdeepOptions= {tocStyle: 'short', sortScheduleLists: false };
+</script>
+
+<!--
+Static analysis
+  - *Reading*:
+    - [How to Build Static Checking Systems Using Orders of Magnitude Less Code](papers/brown:how.pdf) by F. Brown et al.
+    - [Scaling Static Analyses at Facebook](papers/distefano:scaling.pdf) by D. Distefano et al.
+  - *Additional reading*:
+    - [A Few Billion Lines of Code Later: Using Static Analysis to Find Bugs in the Real World](papers/bessey:a-few.pdf) by A. Bessey et al.
+    - [Lessons from Building Static Analysis Tools at Google](papers/sadowski:lessons.pdf) by C. Sadowski et al.
+
+Fuzzing
+  - *Reading*:
+      - [FuzzGen: Automatic Fuzzer Generation](papers/ispoglou:fuzzgen.pdf) by K. K. Ispoglou
+      - [Evaluating Fuzz Testing](papers/klees:evaluating.pdf) by G. Klees et al.
+  - *Additional reading*:
+      - [QSYM:A Practical Concolic Execution EngineTailored for Hybrid Fuzzing](papers/yun:qsym.pdf) by I. Yun et al.
+
+WebAssembly
+  - *Reading*:
+    - [Bringing the Web up to Speed with WebAssembly](papers/haas:wasm.pdf) by A. Haas et al.
+    - [Lucet: A Compiler and Runtime for High-Concurrency Low-Latency Sandboxing](https://www.youtube.com/watch?v=WddPA0U6v2A) by T. McMullen
+  - *Additional reading*:
+    - [Hijacking the control flow of a WebAssembly program](https://www.fastly.com/blog/hijacking-control-flow-webassembly) by J. Foote
+    - [WebAssembly doesn't make unsafe languages safe (yet)](https://00f.net/2018/11/25/webassembly-doesnt-make-unsafe-languages-safe/) by F. Denis
+-->
