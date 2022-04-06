@@ -23,7 +23,7 @@ Staff:
 : **Teaching Assistant**: David Thien
 
 Office hours:
-: **Deian**: Tuesday, 10:00--11:00am, or by appointment
+: **Deian**: Thursay, 3:30--4:00pm, or by appointment
 
 : **David**: By appointment
 
@@ -66,13 +66,12 @@ Thu Apr 7 2022: Undefined behavior
     - [Towards Optimization-Safe Systems: Analyzing the Impact of Undefined Behavior](papers/wang:stack.pdf) by X. Wang et al.
     - [Taming Undefined Behavior in LLVM](papers/lee:taming.pdf) by J. Lee et al.
 
-Tue Apr 12 2022: Control flow integrity
+Tue Apr 12 2022: Supply chain attacks
   - *Reading*:
-    - [Control-Flow Bending: On the Effectiveness of Control-Flow Integrity](papers/carlini:cfb.pdf) by N. Carlini et al.
-    - [Finding Cracks in Shields: On the Security of Control Flow Integrity Mechanisms](papers/li:cracks.pdf) by Li et al.
+    - [Towards Measuring Supply Chain Attacks on Package Managers for Interpreted Languages](https://www.ndss-symposium.org/wp-content/uploads/ndss2021_1B-1_23055_paper.pdf) by R. Duan et al.
+    - [https://nikos.vasilak.is/p/harp:ccs:2021.pdf](https://nikos.vasilak.is/p/harp:ccs:2021.pdf) by N. Vasilakis
   - *Additional reading*:
-    - [Control-Flow Integrity: Principles, Implementations, and Applications](papers/abadi:cfi.pdf) by M. Abadi et al.
-    - [Control-Flow Integrity: Precision, Security, and Performance](papers/burow:cfi.pdf) by N. Burow et al.
+    - [A Look In the Mirror: Attacks on Package Managers](https://theupdateframework.io/papers/attacks-on-package-managers-ccs2008.pdf) by J. Cappos
 
 Thu Apr 14 2022: Software fault isolation
   - *Reading*:
@@ -209,6 +208,71 @@ At the end of the quarter, you are expected to turn in a short research paper
 (6-10 pages) and give a 10 minute talk. We will have periodic status updates to
 help you stay on track.
 
+Project ideas
+==============================================================
+
+Take a look at [Stefan's list of project
+ideas](https://cseweb.ucsd.edu//classes/fa21/cse227-a/projects.html). Here is a
+list of new projects:
+
+- Sandbox a serious third-party C library in a popular C++ program using RLBox.
+- Extend Wasm with provably-safe inline assembly.
+- Verify the SFI safety of binaries compiled with wasm2c (via Clang).
+- Find bugs by combining source-level static checking (e.g., CodeQL) with low-level symbolic execution (a la Sys).
+- Statically (or symbolically) check the IPC layerof Firefox (or Chrome).
+- Design and implement an RLBox like system for Rust.
+- Extend Rust's bindgen to sandbox C code in Rust projects.
+- Extend Node.js' Node-API to sandbox C code for Node.
+- Sandbox CPython code.
+- Analyze the implications of undefined behavior in sandboxing systems.
+- Add hardware backed (e.g., ARM MTE or CHERI) to Memory Safe Wasm (MSWasm) compiler.
+- Sandbox (e.g., using containers) npm install scripts.
+- Implement a transparency system for (detecting supply chain attacks on) npm.
+- Implement a language-level module sandboxing system for Node.js.
+- Analyze the top n Node.js module to understand if a capability security model is practical.
+- Analyze (attack) the pre-processing stage (e.g., image decoding library) of typical neural network pipelines.
+- Verify/check analysis passes (e.g., effects, alias) in JITs.
+- Verify peep hole optimizations in the Firefox JIT.
+- Verify the security of the V8 Sandbox.
+- Port the V8 Sandbox to Firefox' SpiderMonkey.
+- Find bugs in or verify uBPF's code generation.
+
+Hall of fame
+==============================================================
+
+List of papers that started out as CSE 227 projects:
+
+- CoResident Evil: Covert Communications in the Cloud with Lambdas, Anil Yelam, Ariana Mirian, Keerthana Ganesan, Shibani Subbareddy, and Stefan Savage, Proceedings of the Web Conference (WWW), Ljubljana, Solvenia, April 2021.
+
+- Доверя́й, но проверя́й: SFI safety for native-compiled Wasm, Evan Johnson, David Thien, Yousef Alhessi, Shravan Narayan, Fraser Brown, Sorin Lerner, Tyler McMullen, Stefan Savage, and Deian Stefan, Proceedings of the Network and Distributed System Security Symposium (NDSS), San Diego, CA, February 2021.
+
+- Retrofitting Fine Grain Isolation in the Firefox Renderer, Shravan Narayan, Craig Disselkoen, Tal Garfinkel, Nathan Froyd, Eric Rahm, Sorin Lerner, Hovav Shacham, and Deian Stefan, Proceedings of the USENIX Security Symposium, August 2020.
+
+- Network Reconnaissance and Vulnerability Excavation of Secure DDS Systems, Ruffin White, Gianluca Caiazza, Chenxu Jiang, Xinyue Ou, Zhiyue Yang, Agostino Cortesi, Henrik Christensen, Proceedings of Workshop on Software Security for Internet of Things (SSIoT), June 2019.
+
+- FaCT: A Flexible, Constant-Time Programming Language, Sunjay Cauligi, Gary Soeller, Fraser Brown, Brian Johannesmeyer, Yunlu Huang, Ranjit Jhala, and Deian Stefan, Secure Development Conference (SecDev), September 2017.
+
+- On the (In)effectiveness of Mosaicing and Blurring as Tools for Document Redaction, Steven Hill, Zhimin Zhou, Lawrence Saul, and Hovav Shacham, Privacy Enhancing Technologies Symposium, Darmstadt, Germany, July 2016.
+
+- Fast and Vulnerable: A Story of Telematic Failures, Ian Foster, Andrew Prudhomme, Karl Koscher, and Stefan Savage, Proceedings of the USENIX Workshop On Offensive Technologies (WOOT), Washington D.C., August 2015.
+
+- Are AES x86 Cache Timing Attacks Still Feasible? (short paper), Keaton Mowery, Sriram Keelveedhi, and Hovav Shacham, Proceedings of the Cloud Computing Security Workshop (CCSW), October 2012.
+
+- When Good Services Go Wild: Reassembling Web Services for Unintended Purposes, Feng Lu, Jiaqi Zhang, and Stefan Savage, Proceedings of the USENIX Workshop on Hot Topics in Security, Bellevue, WA, August 2012.
+
+- Heat of the Moment: Characterizing the Efficacy of Thermal Camera-Based Attacks, Keaton Mowery, Sarah Meiklejohn, and Stefan Savage, Proceedings of the USENIX Workshop On Offensive Technologies (WOOT), San Francisco, CA, August 2011.
+
+- Extracting Device Fingerprints from Flash Memory by Exploiting Physical Variations, Pravin Prabhu, Ameen Akel, Laura Grupp, Wing-Key Yu, G. Edward Suh, Edwin Kan, and Steven Swanson, Proceedings of the 4th International Conference on Trust and Trustworthy Computing (TRUST), Pittsburg, Pennsylvania, June 2011.
+
+- Privacy-preserving Network Forensics, Mikhail Afanasyev, Tadayoshi Kohno, Justin Ma, Nick Murphy, Stefan Savage, Alex C. Snoeren, and Geoffrey M. Voelker, Communications of the Association for Computing Machinery 54(5), May 2011.
+
+- Got Traffic? An Evaluation of Click Traffic Providers, Qing Zhang, Thomas Ristenpart, Stefan Savage, and Geoffrey M. Voelker, Proceedings of the WICOM/AIRWeb Workshop on Web Quality (WebQuality), Hyderabad, India, Mar 2011.
+
+- Neon: System Support for Derived Data Management, Qing Zhang, John McCullough, Justin Ma, Navil Schear, Michael Vrable, Amin Vahdat, Alex C. Snoeren, and Geoffrey M. Voelker, Proceedings of the ACM International Conference on Virtual Execution Environments (VEE), Pittsburgh, PA, March 2010.
+
+- When Good Instructions Go Bad: Generalizing Return-Oriented Programming to RISC, Erik Buchanan, Ryan Roemer, Hovav Shacham, and Stefan Savage, Proceedings of the ACM Conference on Computer and Communications Security (CCS), Alexandria, VA, October 2008, pages 27-38.
+
+- Reconsidering Physical Key Secrecy: Teleduplication via Optical Decoding, Benjamin Laxton, Kai Wang, and Stefan Savage, Proceedings of the ACM Conference on Computer and Communications Security (CCS), Alexandria, VA, October 2008, pages 469-77.
 
 <style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="markdeep.min.js"></script>
 <script>
