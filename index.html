@@ -99,12 +99,29 @@ Tue Apr 19 2022: Privilege separation
     - [Site Isolation: Process Separation for Web Sites within the Browser](papers/reis:site.pdf) by C. Reis et al.
 
 
-Thu Apr 21 2022: Capabilities
+Thu Apr 21 2022: Invited talk: Binary Hardening and Low Fat Pointers by [Roland Yap](https://www.comp.nus.edu.sg/~ryap/), National University of Singapore
   - *Reading*:
-    - [CHERI: A Hybrid Capability-System Architecture for Scalable Software Compartmentalization](papers/watson:cheri.pdf) by R. Watson et. al
-  - *Additional reading*:
-    - [Capsicum: Practical Capabilities for UNIX](papers/capsicum.pdf) by R. Watson et. al
-    - [CloudABI](https://www.youtube.com/watch?v=3N29vrPoDv8) by E. Schouten
+    - [Hardening Binaries against More Memory Errors](papers/duck:hardening.pdf) by G. Duck et al.
+
+  - *Abstract*: 
+
+            Memory errors are often the root cause of security vulnerabilities and
+            exploitation in low level languages. We will first overview 
+            Low-Fat pointers which gives a easy and efficient way of doing 
+            out-of-bounds detection with pointers. Low Fat pointers have been used 
+            to create an efficient tool for detecting spatial memory errors for C/C++ 
+            with the LowFat sanitizer and type checking and sub-bounds error checking
+            sanitizer with EffectiveSan.
+
+            In this talk, we will focus on new work which looks at how to harden
+            binaries against memory errors. We introduce RedFat, a binary rewriter
+            which hardens x86_64 binaries against heap memory errors (spatial and
+            temporal). It uses a complementary error detection methodology combining
+            low fat pointers with red zones. RedFat makes minimal assumptions about
+            the binary and is able to operate on stripped and non-PIC binaries.
+            It is also language agnostic and has been evaluated on C/C++/Fortran
+            benchmarks.
+
 
 Tue Apr 26 2022: Information flow control
   - *Reading*:
